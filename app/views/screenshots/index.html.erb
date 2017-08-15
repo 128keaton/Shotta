@@ -2,20 +2,23 @@
 <h1>Shotta</h1>
 
 <%= form_for current_user, url: {action: "upload"}, html: {class: "dropzone", id: "upload"}, :method => :POST  do |f| %>
-   <!-- <div class="fallback">  -->
+    <div class="fallback"> 
         <%= f.file_field :screenshots, multiple: true %>
+        <%= f.submit "Upload" %>
     </div>
-    <%= f.submit "Upload" %>
 <% end %>
 
 <% if @screenshots.count > 0 %>
 <table>
 <% @screenshots.each do |screenshot| %>
+<% if screenshot.image.url != nil %>
   <tr>
     <td>
-        <img src="<%= screenshot.url %>"
+        <img src="<%= screenshot.image.url %>">
+        <% puts screenshot.inspect %>
     </td>
   </tr>
+<% end %>
 <% end %>
 </table>
 <% end %>

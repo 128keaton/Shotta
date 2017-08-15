@@ -16,3 +16,9 @@
 body{
     font-family: -apple-system-font, "Helvetica Neue", Helvetica, sans-serif;
 }
+a{
+    color: #ffffff;
+    background-color: #000000;
+    padding: 12px;
+    font-size: 2em;
+}

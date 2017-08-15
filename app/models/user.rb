@@ -3,6 +3,5 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable 
-  mount_uploaders :screenshots, ScreenshotsUploader
-  serialize :screenshots, JSON
+  has_many :screenshots,  dependent: :destroy
 end
