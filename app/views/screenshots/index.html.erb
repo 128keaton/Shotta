@@ -1,0 +1,21 @@
+<%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+<h1>Shotta</h1>
+
+<%= form_for current_user, url: {action: "upload"}, html: {class: "dropzone", id: "upload"}, :method => :POST  do |f| %>
+   <!-- <div class="fallback">  -->
+        <%= f.file_field :screenshots, multiple: true %>
+    </div>
+    <%= f.submit "Upload" %>
+<% end %>
+
+<% if @screenshots.count > 0 %>
+<table>
+<% @screenshots.each do |screenshot| %>
+  <tr>
+    <td>
+        <img src="<%= screenshot.url %>"
+    </td>
+  </tr>
+<% end %>
+</table>
+<% end %>

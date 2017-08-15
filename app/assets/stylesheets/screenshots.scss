@@ -1,0 +1,29 @@
+// Place all the styles related to the screenshots controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h1{
+    font-size: 10em;
+    border-bottom: 0.2em solid black;
+}
+table{
+    text-align: center;
+    margin: 0 auto;
+    td{
+        text-align: center;
+    }
+    img{
+        max-width: 145px;
+        margin-bottom: 2em;
+        padding: 0;
+        border: 0.2em solid black;
+    }
+}
+.dropzone{
+    border: 2px dashed #0087F7;
+    border-radius: 5px;
+    background: white;
+    min-height: 150px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 54px 54px;
+}
