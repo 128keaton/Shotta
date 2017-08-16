@@ -9,3 +9,4 @@ CarrierWave.configure do |config|
     config.fog_directory  = 'shotta'                          # required
     config.fog_attributes = { cache_control: "public, max-age=#{365.day.to_i}" } # optional, defaults to {}
   end
+  
