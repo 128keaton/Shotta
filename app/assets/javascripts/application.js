@@ -33,10 +33,10 @@ $(function () {
                 }
 
                 if (acceptedFiles.length != 0) {
-                    alertify.success('Uploaded ' + acceptedFiles.length + ' files successfully.');
+                    //alertify.success('Uploaded ' + acceptedFiles.length + ' files successfully.');
                 }
                 if (rejectedFiles.length != 0) {
-                    alertify.error('Error uploading ' + rejectedFiles.length + ' files. Only image files are accepted.');
+                    //alertify.error('Error uploading ' + rejectedFiles.length + ' files. Only image files are accepted.');
                 }
 
                 _this.removeAllFiles();
@@ -46,8 +46,7 @@ $(function () {
         location.reload();
     });
 
-    mediaDropzone.on("queuecomplete", function (file) {
-        alert("All files have uploaded ");
+    mediaDropzone.on("successmultiple", function(files, response) {
         location.reload();
     });
 });
