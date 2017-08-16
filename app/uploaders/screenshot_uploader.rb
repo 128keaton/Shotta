@@ -9,6 +9,10 @@ class ScreenshotUploader < CarrierWave::Uploader::Base
   process :strip
   process :interlace 
 
+  def cache_dir
+    "#{Rails.root}/tmp/uploads"
+  end
+  
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/"
   end
