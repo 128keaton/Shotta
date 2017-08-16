@@ -7,7 +7,7 @@ class ScreenshotUploader < CarrierWave::Uploader::Base
   process :convert => 'jpg'
   process :exif_rotation
   process :strip
-  process :interlace => "Plane" 
+  process :interlace 
 
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/"
@@ -58,10 +58,14 @@ class ScreenshotUploader < CarrierWave::Uploader::Base
   end
   
   # set the Interlace of the image plane/basic
-  def interlace(type)
+  def interlace()
     manipulate! do |img|
-      img.interlace(type.to_s)
-      img = yield(img) if block_given?
+      img.strip
+      img.combine_options do |c|
+        c.quality "90"
+        c.depth "8"
+        c.interlace "plane"
+      end
       img
     end
   end
