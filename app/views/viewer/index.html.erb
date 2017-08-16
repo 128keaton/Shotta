@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" id="viewer">
 <h1>Shotta</h1>
 <div class="button-bar">
 <a href="/">Home</a>
@@ -6,3 +6,7 @@
 <h2><%= @screenshot.image_identifier %></h2>
 <img src="<%= @screenshot.image %>">
 <h3>Uploaded: <%= @screenshot.created_at %></h3>
+<% if user_signed_in? && current_user.id === @screenshot.user_id %>
+
+<%= button_to 'Delete', {controller: "screenshots", action: "delete", id: @screenshot.id }, :method =>  :post  %>
+<% end %>

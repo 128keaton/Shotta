@@ -1,3 +1,16 @@
 // Place all the styles related to the viewer controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#viewer{
+    img{
+        max-width: 50%;
+    }
+    form.button_to{
+        input{
+            border: none;
+            font-size: 1.5em;
+            background-color: red;
+            color: #ffffff;
+        }
+    }
+}

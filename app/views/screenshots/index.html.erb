@@ -16,7 +16,6 @@
 <% if screenshot.image.url != nil %>
 <div class="grid-child" onclick="window.location='/view/<%= screenshot.id %>'">
 <div class="img" style="background: url(<%= screenshot.image.url %>);"></div>
-<%= button_to '', {action: "delete", id: screenshot.id }, :method =>  :post  %>
 </div>
 <% end %>
 <% end %>
