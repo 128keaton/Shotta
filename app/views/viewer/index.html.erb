@@ -1,4 +1,7 @@
 <% content_for :for_head do %>
+    <meta property="og:title" content="<%= @screenshot.image_identifier %>"/>
+    <meta property="og:description" content="Uploaded: <%= @screenshot.created_at %>"/>
+    <meta property="og:site_name" content="Shotta"/>
    <meta property="og:image" content="<%= @screenshot.image %>"/>
 <% end %>
 
