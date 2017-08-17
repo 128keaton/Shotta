@@ -18,7 +18,7 @@ class ViewerController < ApplicationController
     content_tag(:meta, nil, content: title, name: 'title') +
     content_tag(:meta, nil, content: description, name: 'description') +
     content_tag(:link, nil, href: image, rel: 'image_src').html_safe +
-    content_tag(:meta, nil, content: 'twitter summary', name: 'twitter:card') +
+    content_tag(:meta, nil, content: 'summary', name: 'twitter:card') +
     content_tag(:meta, nil, content: title, name: 'twitter:title') +
     content_tag(:meta, nil, content: description, name: 'twitter:description') +
     content_tag(:meta, nil, content: image, name: 'twitter:image') +
