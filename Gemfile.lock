@@ -87,6 +87,7 @@ GEM
     formatador (0.2.5)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    haikunator (1.1.0)
     i18n (0.8.6)
     ipaddress (0.8.3)
     jbuilder (2.7.0)
@@ -204,6 +205,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   fog-aws
+  haikunator
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

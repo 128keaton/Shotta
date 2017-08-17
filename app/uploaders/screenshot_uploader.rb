@@ -12,7 +12,7 @@ class ScreenshotUploader < CarrierWave::Uploader::Base
   def cache_dir
     "#{Rails.root}/tmp/uploads"
   end
-  
+
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/"
   end
@@ -22,11 +22,12 @@ class ScreenshotUploader < CarrierWave::Uploader::Base
   end
 
   def filename
+    new_name = Haikunator.haikunate
     if original_filename
       if model && model.read_attribute(mounted_as).present?
         model.read_attribute(mounted_as)
       else
-        @name ||= "#{mounted_as}-#{random_string}.jpeg"
+        @name ||= "#{new_name}.jpeg"
       end
     end
   end
@@ -62,11 +63,11 @@ class ScreenshotUploader < CarrierWave::Uploader::Base
   end
   
   # set the Interlace of the image plane/basic
-  def interlace()
+  def interlace
     manipulate! do |img|
       img.strip
       img.combine_options do |c|
-        c.quality "90"
+        c.quality "80"
         c.depth "8"
         c.interlace "plane"
       end
