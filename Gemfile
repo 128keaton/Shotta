@@ -1,4 +1,3 @@
-ruby '2.4.0'
 source 'https://rubygems.org'
 gem 'dotenv-rails', groups: [:development, :test]
 git_source(:github) do |repo_name|
@@ -57,3 +56,4 @@ gem 'carrierwave'
 gem "fog-aws"
 gem "mini_magick"
 gem 'haikunator'
+gem 'newrelic_rpm'
