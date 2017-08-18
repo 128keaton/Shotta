@@ -59,8 +59,38 @@ h1{
 
 .dropzone{
     width: 100%;
-    border: 0.2em solid black;
+    border: none;
     margin: 0 auto;
     font-size: 3em;
     margin-bottom: 100px;
+    margin-top: 50px;
+    border-radius: 12px;
+    height: 100px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+
+    -webkit-box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.44);
+    -moz-box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.44);
+    box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.44);
+
+    .dz-message{
+        text-align: left;
+        margin: 0;  
+        margin-left: 0.5em; 
+        display: flex;
+        align-items: center;
+        span{
+            display: block;
+            font-size: 0.5em;
+        }    
+        span:after{
+            white-space: pre;
+            font-size: 14px;
+            color: #585858;
+            content: "\A Files like screenshots or mockups";
+            margin-top: -15px;
+            display: block;
+        }
+    }
 }

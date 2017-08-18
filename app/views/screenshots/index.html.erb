@@ -1,9 +1,4 @@
 <div class="wrapper">
-<h1>Shotta</h1>
-
-<div class="button-bar">
-<%= link_to('Logout', destroy_user_session_path, method: :delete) %>      
-</div>
 <%= form_for current_user, url: {action: "upload"}, html: {class: "dropzone", id: "upload"}, :method => :POST  do |f| %>
     <div class="fallback"> 
         <%= f.file_field :screenshots, multiple: true %>

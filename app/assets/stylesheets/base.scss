@@ -1,0 +1,23 @@
+.header{
+    background-color: #ffffff;
+    width: 100%;
+    .header-wrapper{
+        h1{
+            margin: 0;
+            flex: 2;
+        }
+        a{
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #585858;
+            padding: 12px;
+        }
+        a:hover{
+            color: gray;
+        }
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+}
