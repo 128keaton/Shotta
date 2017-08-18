@@ -57,3 +57,4 @@ gem "fog-aws"
 gem "mini_magick"
 gem 'haikunator'
 gem 'newrelic_rpm'
+gem 'devise-token_authenticatable'

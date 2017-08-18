@@ -61,6 +61,8 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    devise-token_authenticatable (1.0.0)
+      devise (>= 4.0.0, < 4.4.0)
     dotenv (2.2.1)
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
@@ -204,6 +206,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   devise
+  devise-token_authenticatable
   dotenv-rails
   fog-aws
   haikunator

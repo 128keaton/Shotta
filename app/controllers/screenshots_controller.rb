@@ -1,7 +1,7 @@
 class ScreenshotsController < ApplicationController
   before_action :authenticate_user!
+  
   def index
-   
     @screenshots = User.find(current_user.id).screenshots.order! 'created_at DESC'
   end
 
