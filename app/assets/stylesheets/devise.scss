@@ -1,13 +1,18 @@
 /* Devise */
 .devise{
     h2{
-        font-size: 4em;
-        font-weight: 100;
+        font-size: 1em;
+        font-weight: 300;
+        color: gray;
     }
     margin: 0 auto;
     width: 50%;
+    background-color: #ffffff;
+    padding: 12px;
+    margin-top: 2em;
+    border-radius: 12px;
     .field{
-        margin-bottom: 2em;
+        margin-top: 2em;
         label{
             font-size: 1em;
             font-weight: 100; 
@@ -16,7 +21,7 @@
             border: none;
             height: 40px;
             width: 20em;
-            margin-top: 1em;
+            margin-top: 5px;
             color: #ffffff;
             font-size: 1.5em;
             padding: 8px;
@@ -28,5 +33,12 @@
        font-size: 1.5em;
        background-color: transparent;
        padding: 0;
+    }
+    .links{
+        display: flex;
+        margin-top: 15px;
+        a{
+            padding-right: 12px;
+        }
     }
 }

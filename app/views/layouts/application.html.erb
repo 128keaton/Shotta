@@ -14,13 +14,13 @@
 
   <body>
     <div class="header">
-      <% if notice %>
+      <div class="header-wrapper">
+            <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
       <% end %>
       <% if alert %>
         <p class="alert alert-danger"><%= alert %></p>
       <% end %>
-      <div class="header-wrapper">
         <h1>Shotta</h1>
         <%= link_to('Logout', destroy_user_session_path, method: :delete) %>      
       </div>

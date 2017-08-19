@@ -1,16 +1,17 @@
 // Place all the styles related to the screenshots controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.wrapper{
-    width: 50%;
+.wrapper {
+    width: 95%;
     margin: 0 auto;
 }
 
-h1{
+h1 {
     font-size: 10em;
     margin-bottom: 12px;
 }
-.button-bar{
+
+.button-bar {
     width: 100%;
     margin: 0 auto;
     margin-bottom: 25px;
@@ -20,13 +21,13 @@ h1{
     padding-bottom: 12px;
     display: flex;
     align-items: center;
-    a{
+    a {
         color: #ffffff;
         padding: 10px;
         font-size: 1.5em;
     }
-    
 }
+
 .grid-daddy {
     margin: 10px 0;
     display: grid;
@@ -45,9 +46,11 @@ h1{
     width: 300px;
     height: 300px;
     background-color: black;
-    border: 0.1em solid black;
     position: relative;
-    .img{
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    .img {
         width: 300px;
         height: 300px;
         background-size: cover!important;
@@ -56,38 +59,48 @@ h1{
     }
 }
 
-
-.dropzone{
-    width: 100%;
+.dropzone {
+    width: 45%;
     border: none;
     margin: 0 auto;
     font-size: 3em;
     margin-bottom: 100px;
     margin-top: 50px;
-    border-radius: 12px;
+    -webkit-clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+    padding: 55px;
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
     height: 100px;
     min-height: 100px;
     display: flex;
     align-items: center;
-
-    -webkit-box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.44);
-    -moz-box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.44);
-    box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.44);
-
-    .dz-message{
+    border-bottom: 20px solid #141B41;
+    background-color: #D81E5B;
+    .dz-preview .dz-image {
+        width: 100px!important;
+        height: 100px!important;
+        border-radius: 0!important;
+    }
+    .dz-preview.dz-image-preview {
+        width: 100px;
+        height: 100px;
+        background-color: transparent!important;
+        border-radius: 0!important;
+    }
+    .dz-message {
         text-align: left;
-        margin: 0;  
-        margin-left: 0.5em; 
+        margin: 0;
+        margin-left: 0.5em;
         display: flex;
         align-items: center;
-        span{
+        span {
             display: block;
             font-size: 0.5em;
-        }    
-        span:after{
+            color: #ffffff;
+        }
+        span:after {
             white-space: pre;
             font-size: 14px;
-            color: #585858;
+            color: #fe9c81;
             content: "\A Files like screenshots or mockups";
             margin-top: -15px;
             display: block;

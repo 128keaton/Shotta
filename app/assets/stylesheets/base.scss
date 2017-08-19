@@ -1,23 +1,32 @@
 .header{
-    background-color: #ffffff;
+    background-color: #22031F;
     width: 100%;
+    margin: 0 auto;
     .header-wrapper{
+
         h1{
             margin: 0;
             flex: 2;
+            color: #D81E5B;
+            padding-left: 10px;
         }
         a{
             text-decoration: none;
             font-size: 1.2em;
-            color: #585858;
+            color: #fe9c81;
             padding: 12px;
         }
         a:hover{
             color: gray;
         }
-        width: 50%;
+        width: 100%;
         margin: 0 auto;
         display: flex;
         align-items: center;
     }
+}
+.sidebar{
+    height: 100%;
+    background-color: white;
+    position: fixed;
 }

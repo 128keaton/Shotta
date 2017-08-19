@@ -7,7 +7,7 @@
 <% end %>
 
 <% if @screenshots.count > 0 %>
-<div class="grid-daddy">
+<div class="grid-daddy" id="daddy">
 <% @screenshots.each do |screenshot| %>
 <% if screenshot.image.url != nil %>
 <div class="grid-child" onclick="window.location='/view/<%= screenshot.id %>'">
