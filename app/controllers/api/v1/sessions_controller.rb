@@ -14,10 +14,15 @@ module Api
           end
           
           def destroy
-              resource = current_user
-              resource.invalidate_auth_token
-              head 200
+              if resource = User.find_by(auth_token: get_auth_token)
+                resource.invalidate_auth_token
+                render json: { 'status': 'logged out'}
+              end
           end
+
+        def get_auth_token
+            request.headers['X-AUTH-TOKEN']
+        end
           
           private
               def invalid_login_attempt
